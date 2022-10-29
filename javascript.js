@@ -11,20 +11,19 @@ function getComputerChoice() {
   function playRound() {
     let computerSelection = getComputerChoice()
 
-        if (this.innerHTML == "rock" && computerSelection == "scissors" || 
-            this.innerHTML == "paper" && computerSelection == "rock" ||
-            this.innerHTML == "scissors" && computerSelection == "paper") {
-          results.textContent = `You win, ${this.innerHTML} beats ${computerSelection}`;
-        } else if (this.innerHTML == computerSelection) {
-            results.textContent = `It's a tie ${this.innerHTML} equals ${computerSelection}`;
+        if (this.textContent == "rock" && computerSelection == "scissors" || 
+            this.textContent == "paper" && computerSelection == "rock" ||
+            this.textContent == "scissors" && computerSelection == "paper") {
+          results.textContent = `You win, ${this.textContent} beats ${computerSelection}`;
+        } else if (this.textContent == computerSelection) {
+            results.textContent = `It's a tie ${this.textContent} equals ${computerSelection}`;
         } else  {
-          results.textContent = `${this.innerHTML} loses against ${computerSelection}`;
+          results.textContent = `${this.textContent} loses against ${computerSelection}`;
         };
       }
   
-  
- 
-
+    
+  const results = document.querySelector('.results');
   const rock = document.querySelector('.rock'); 
   const paper = document.querySelector('.paper');
   const scissors = document.querySelector('.scissors');
@@ -34,23 +33,15 @@ function getComputerChoice() {
     for (let i = 0; i < array.length; i++) {
       array[i].addEventListener('click', playRound);    
     }
+
+  
   
       
-   const results = document.querySelector('.results');
+   
   
 
    
  
- 
-
-
-
-
-
-
-
-
-
 
 
 
